@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * main - Prints numbers 0 to 9 and letters a to f in lowercase.
