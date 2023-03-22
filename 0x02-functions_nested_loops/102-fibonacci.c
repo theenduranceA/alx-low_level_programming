@@ -8,9 +8,8 @@
 
 int main(void)
 {
-	int a = 0
-
-	long b = 1, c = 2;
+	int a = 0;
+	unsigned long b = 1, c = 2;
 
 	while (a < 50)
 	{
