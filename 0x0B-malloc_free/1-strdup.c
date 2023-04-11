@@ -15,10 +15,11 @@ char *_strdup(char *str)
 	int y = 0;
 	char *zed;
 
-	while (str[x] != '\0')
-		x++;
 	if (str == NULL)
 		return (NULL);
+
+	while (str[x] != '\0')
+		x++;
 
 	zed = malloc(sizeof(char) * (x + 1));
 
