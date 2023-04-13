@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 
 /**
@@ -21,10 +22,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
-	while (s1[x] != '\0')
+	while (s1[x])
 		x++;
 
-	while (s2[len1] != '\0')
+	while (s2[len1])
 		len1++;
 
 	if (n >= len1)
@@ -47,8 +48,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		if (y >= x)
 		{
 			zed[y] = s2[len1];
-			len1++, y++;
+			len1++;
 		}
+		y++;
 
 	}
 	zed[y] = '\0';
