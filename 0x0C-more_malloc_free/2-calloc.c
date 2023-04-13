@@ -19,11 +19,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
+
 	y = nmemb * size;
 	zed = malloc(y);
+
 	if (zed == NULL)
 		return (NULL);
-	while (x <= y)
+
+	while (x < y)
 	{
 		zed[x] = 0;
 		x++;
