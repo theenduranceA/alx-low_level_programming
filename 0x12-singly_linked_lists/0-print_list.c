@@ -1,8 +1,9 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_list - Function that prints all the elements of a list
- * @h: The list to be printed
+ * @h: Pointer to the list to be printed
  *
  * Return: Number of nodes in the list
  */
