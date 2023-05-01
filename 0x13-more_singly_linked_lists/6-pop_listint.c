@@ -19,7 +19,7 @@ int pop_listint(listint_t **head)
 		*head = zed->next;
 		free(zed);
 	}
-	else 
+	else
 		x = 0;
 	return (x);
 }
