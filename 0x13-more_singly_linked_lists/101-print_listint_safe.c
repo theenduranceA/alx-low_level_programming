@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdio.h>
 
 /**
  * print_listint_safe - Function that prints a linked list
@@ -9,20 +10,21 @@
 
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *node = head;
+	const listint_t *zed;
 	size_t x;
 
+	zed = head;
 	x = 0;
-	while (node && node > node->next)
+	while (zed && zed > zed->next)
 	{
-		printf("[%p] %d\n", (void *)node, node->n);
-		node = node->next;
+		printf("[%p] %d\n", (void *)zed, zed->n);
+		zed = zed->next;
 		x++;
 	}
-	if (node)
+	if (zed)
 	{
-		printf("[%p] %d\n", (void *)node, node->n);
-		printf("-> [%p] %d\n", (void *)node->next, node->next->n);
+		printf("[%p] %d\n", (void *)zed, zed->n);
+		printf("-> [%p] %d\n", (void *)zed->next, zed->next->n);
 		x++;
 	}
 	return (x);
