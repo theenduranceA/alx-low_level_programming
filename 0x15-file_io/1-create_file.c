@@ -23,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		close(my_file);
 		return (1);
-
+	}
 	for (len = 0; text_content[len];)
 		len++;
 
