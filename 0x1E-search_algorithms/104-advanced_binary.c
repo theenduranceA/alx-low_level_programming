@@ -32,9 +32,9 @@ int recursive_advanced_binary(int *array, int x, int y, int value)
 	if (array[z] == value)
 		return (z);
 	else if (array[z] < value)
-		return recursive_advanced_binary(array, z + 1, y, value);
+		return (recursive_advanced_binary(array, z + 1, y, value));
 	else
-		return recursive_advanced_binary(array,x, z - 1, value);
+		return (recursive_advanced_binary(array, x, z - 1, value));
 }
 
 /**
@@ -51,5 +51,5 @@ int advanced_binary(int *array, size_t size, int value)
 	if (array == NULL)
 		return (-1);
 
-	return recursive_advanced_binary(array, 0, size - 1, value);
+	return (recursive_advanced_binary(array, 0, size - 1, value));
 }
