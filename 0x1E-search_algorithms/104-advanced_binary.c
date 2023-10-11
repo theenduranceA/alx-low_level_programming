@@ -22,19 +22,17 @@ int recursive_advanced_binary(int *array, int x, int y, int value)
 	printf("Searching in array: ");
 	for (i = x; i <= y; i++)
 	{
-		printf("%d", array[i]);
-		if (i < y)
-			printf(", ");
+		printf("%i ", array[i]);
 	}
-	printf("\n");
+	printf("%i\n", array[y]);
 
 
-	if (array[z] == value)
+	if (array[z] == value && (z == x || array[z - 1] != value))
 		return (z);
-	else if (array[z] < value)
-		return (recursive_advanced_binary(array, z + 1, y, value));
+	else if (array[z] >= value)
+		return (recursive_advanced_binary(array, x, z, value));
 	else
-		return (recursive_advanced_binary(array, x, z - 1, value));
+		return (recursive_advanced_binary(array, z + 1, y, value));
 }
 
 /**
@@ -48,7 +46,7 @@ int recursive_advanced_binary(int *array, int x, int y, int value)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	return (recursive_advanced_binary(array, 0, size - 1, value));
